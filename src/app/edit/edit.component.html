@@ -1,0 +1,36 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" method="post">
+  <editor
+    apiKey="o4u30qc4trzi31muf98kaq9stwhypbig7zw1nxevfmewssd1"
+    [init]="{
+      menubar: true,
+      plugins: 'advcode advlist lists anchor autolink link casechange charmap checklist code codesample ' +
+       'tinycomments directionality emoticons formatpainter fullscreen hr help image imagetools ' +
+        'pagebreak preview quickbars table tinydrive wordcount',
+
+      toolbar: 'cut copy paste selectall undo redo' +
+       '|bold italic underline strikethrough subscript superscript hr pagebreak' +
+       '| alignleft aligncenter alignright alignjustify ltr rtl' +
+       '| bullist numlist checklist codesample outdent indent ' +
+       '| table tablecellprops tablecopyrow tablecutrow tabledelete tabledeletecol tabledeleterow ' +
+        'tableinsertcolafter tableinsertcolbefore tableinsertrowafter tableinsertrowbefore tablemergecells' +
+       '| fontselect fontsizeselect' +
+       '| forecolor backcolor styleselect formatselect blockquote removeformat casechange ' +
+       '| image editimage fliph flipv rotateleft rotateright' +
+       '| code anchor link charmap emoticons formatpainter' +
+       '| addcomment showcomments fullscreen preview help insertfile wordcount',
+
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author',
+      file_picker_types: 'file image media',
+      image_caption: true,
+      image_advtab: true,
+      image_prepend_url: '',
+      quickbars_insert_toolbar: 'quickimage quicktable',
+      height:600
+    }"
+    ngModel
+    name="inputHtml"
+    [initialValue]="html.inputHtml"
+  ></editor>
+  <input class="btn btn-primary" type="submit">
+</form>
